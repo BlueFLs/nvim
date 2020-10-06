@@ -155,7 +155,6 @@ nmap tt :CocCommand explorer<CR>
 nmap <leader>e <Plug>(easymotion-s2)
 
 "tcomment_vim
-nnoremap ci cl
 let g:tcomment_textobject_inlinecomment = ''
 nmap <LEADER>cn g>c
 vmap <LEADER>cn g>
