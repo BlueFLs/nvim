@@ -1,6 +1,13 @@
 {
   "coc.preferences.extensionUpdateCheck":"daily",
 
+  "languageserver": {
+      "svls": {
+          "command": "svls",
+          "filetypes": ["systemverilog"]
+      }
+  },
+
 	"explorer.width": 38,
 	"explorer.quitOnOpen": true,
 	"explorer.sources": [
@@ -82,5 +89,5 @@
 		"]c": "gitNext",
 		"<<": "gitStage",
 		">>": "gitUnstage"
-	},
+	}
 }
