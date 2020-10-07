@@ -43,7 +43,6 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-surround'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'srcery-colors/srcery-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'cohama/agit.vim'
@@ -53,17 +52,17 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'liuchengxu/vista.vim'
+Plug 'mhartington/oceanic-next'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                Plugset
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:srcery_italic = 1
-colorscheme srcery
-
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
 
 nnoremap <F5> :UndotreeToggle<CR>
-
 
 let g:indentLine_enabled=1
 let g:indentLine_fileTypeExclude = ['coc-explorer']
