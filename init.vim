@@ -34,7 +34,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                PlugList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call plug#begin('D:\ProgramFiles\scoop\apps\neovim\0.4.3\share\nvim\plugged')
+call plug#begin('D:\ProgramFiles\scoop\apps\neovim\current\share\nvim\plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
@@ -53,6 +53,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'liuchengxu/vista.vim'
 Plug 'mhartington/oceanic-next'
+Plug 'RRethy/vim-illuminate'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
