@@ -1,4 +1,5 @@
-set guifont=FantasqueSansMono\ NF:h12
+"set guifont=FantasqueSansMono\ NF:h12
+set guifont=CaskaydiaCove\ Nerd\ Font:h12
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set autoread
 set title
@@ -160,4 +161,3 @@ nmap <LEADER>cn g>c
 vmap <LEADER>cn g>
 nmap <LEADER>cu g<c
 vmap <LEADER>cu g<
-
