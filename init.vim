@@ -105,6 +105,7 @@ let g:rainbow_active = 1
 let g:coc_global_extensions = [
 	\ 'coc-json',
 	\ 'coc-python',
+	\ 'coc-clangd',
 	\ 'coc-snippets',
 	\ 'coc-yank',
 	\ 'coc-explorer',
