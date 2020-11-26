@@ -1,5 +1,3 @@
-"set guifont=FantasqueSansMono\ NF:h12
-set guifont=CaskaydiaCove\ Nerd\ Font:h12
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set autoread
 set title
@@ -22,16 +20,9 @@ set smartcase
 set shada='20,<50,s10
 let g:mapleader=" "
 let g:python3_host_prog='D:\ProgramFiles\anaconda\python.exe'
-nnoremap <F7> :let @+=expand('%:p')<CR>
+"nnoremap <F7> :let @+=expand('%:p')<CR>
 noremap <C-g> :set splitbelow<CR>:split<CR>:term<CR>
 set winaltkeys=no
-if has('nvim')
-    try
-        call rpcnotify(1, 'Gui', 'Option', 'Tabline', 0)
-        call rpcnotify(1, 'Gui', 'Option', 'Popupmenu', 0)
-    catch
-    endtry
-endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                PlugList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
