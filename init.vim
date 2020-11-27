@@ -1,3 +1,4 @@
+set termguicolors
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set autoread
 set title
@@ -6,7 +7,6 @@ set rnu
 set cursorcolumn
 set cursorline
 syntax on
-set termguicolors
 set clipboard+=unnamedplus
 set encoding=UTF-8
 autocmd BufWritePre * :%s/\s\+$//e
@@ -23,12 +23,16 @@ let g:python3_host_prog='D:\ProgramFiles\anaconda\python.exe'
 "nnoremap <F7> :let @+=expand('%:p')<CR>
 noremap <C-g> :set splitbelow<CR>:split<CR>:term<CR>
 set winaltkeys=no
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                PlugList
+"PlugList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 call plug#begin('D:\ProgramFiles\scoop\apps\neovim\current\share\nvim\plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'liuchengxu/space-vim-theme'
+Plug 'mg979/vim-xtabline'
 Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
@@ -44,43 +48,48 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'liuchengxu/vista.vim'
-Plug 'mhartington/oceanic-next'
 Plug 'RRethy/vim-illuminate'
+Plug 'bfredl/nvim-miniyank'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                Plugset
+"Plugset
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
+"themes
+colorscheme space_vim_theme
 
+"undotree
 nnoremap <F5> :UndotreeToggle<CR>
 
+"indentLine
 let g:indentLine_enabled=1
-let g:indentLine_fileTypeExclude = ['coc-explorer']
+let g:indentLine_fileTypeExclude = ['coc-explorer', 'startify']
 
+"airliine
 let g:airline_theme='laederon'
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#show_buffers = 0
 nnoremap <tab> gt
 
-"let g:Lf_PythonVersion = 3
+"xtabline
+let g:xtabline_settings = {}
+let g:xtabline_settings.enable_mappings = 0
+let g:xtabline_settings.buffers_paths = 0
+let g:xtabline_settings.current_tab_paths = 0
+let g:xtabline_settings.other_tabs_paths = 0
+
+"leaderf
 let g:Lf_UseCache = 0
 let g:Lf_DefaultExternalTool = "rg"
 let g:Lf_WorkingDirectoryMode = 'Ac'
-"let g:Lf_GtagsSource = 2
 let g:Lf_RootMarkers = ['.root','.git']
 let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_CacheDirectory = 'E:\Work\temp\gtags'
 let g:Lf_Gtagslabel="native-pygments"
-"let g:Lf_UseVersionControlTool = 0
 let g:Lf_Gtagsconf = 'D:\ProgramFiles\scoop\apps\global\6.6.3\share\gtags\gtags.conf'
 
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
-"
+
 nnoremap <leader>l :Leaderf! line<CR>
 nnoremap <leader>f :Leaderf! file<CR>
 nnoremap <leader>r :Leaderf! rg<CR>
@@ -125,7 +134,6 @@ function! s:check_back_space() abort
 endfunction
 
 "GitGutter
-
 let g:gitgutter_sign_allow_clobber = 0
 let g:gitgutter_map_keys = 0
 let g:gitgutter_override_sign_column_highlight = 0
@@ -153,3 +161,7 @@ nmap <LEADER>cn g>c
 vmap <LEADER>cn g>
 nmap <LEADER>cu g<c
 vmap <LEADER>cu g<
+
+"miniyank
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
