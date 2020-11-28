@@ -1,3 +1,4 @@
+set guifont=CaskaydiaCove\ Nerd\ Font:h13
 set termguicolors
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set autoread
@@ -25,6 +26,13 @@ noremap <C-g> :set splitbelow<CR>:split<CR>:term<CR>
 set winaltkeys=no
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"neovide
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:neovide_cursor_antialiasing=v:true
+"let g:neovide_no_idle=v:true
+"let g:neovide_cursor_vfx_mode="railgun"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "PlugList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -33,6 +41,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'mg979/vim-xtabline'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
@@ -50,6 +59,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'liuchengxu/vista.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'bfredl/nvim-miniyank'
+Plug 'gcmt/wildfire.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
